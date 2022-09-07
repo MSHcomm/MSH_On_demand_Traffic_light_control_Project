@@ -1,0 +1,550 @@
+Archive member included because of file (symbol)
+
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o (exit)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+                              ./MCAL/gpTimer/Gpt.o (__do_copy_data)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                              ./MCAL/gpTimer/Gpt.o (__do_clear_bss)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(abort.o)
+                              ./Application/app.o (abort)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00020000         xr
+data             0x00800060         0x0000ffa0         rw !x
+eeprom           0x00810000         0x00010000         rw !x
+fuse             0x00820000         0x00000400         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+LOAD ./MCAL/gpTimer/Gpt.o
+LOAD ./MCAL/External_Interrupts/Ext_Interrupts.o
+LOAD ./MCAL/DIO/DIO.o
+LOAD ./ECUAL/LED/LED.o
+LOAD ./ECUAL/Button/Button.o
+LOAD ./Application/app.o
+LOAD ./main.o
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00000000      0xdce
+ *(.vectors)
+ .vectors       0x00000000       0x54 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+                0x00000000                __vectors
+                0x00000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+ *(.progmem*)
+                0x00000054                . = ALIGN (0x2)
+                0x00000054                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x00000054        0x0 linker stubs
+ *(.trampolines*)
+                0x00000054                __trampolines_end = .
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x00000054                __ctors_start = .
+ *(.ctors)
+                0x00000054                __ctors_end = .
+                0x00000054                __dtors_start = .
+ *(.dtors)
+                0x00000054                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x00000054        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+                0x00000054                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x00000054        0xc c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x00000060       0x16 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+                0x00000060                __do_copy_data
+ .init4         0x00000076       0x10 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                0x00000076                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x00000086        0x8 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ *(.init9)
+ *(.text)
+ .text          0x0000008e        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+                0x0000008e                __vector_12
+                0x0000008e                __bad_interrupt
+                0x0000008e                __vector_6
+                0x0000008e                __vector_13
+                0x0000008e                __vector_17
+                0x0000008e                __vector_19
+                0x0000008e                __vector_15
+                0x0000008e                __vector_8
+                0x0000008e                __vector_14
+                0x0000008e                __vector_16
+                0x0000008e                __vector_18
+                0x0000008e                __vector_20
+ .text          0x00000092        0x0 ./MCAL/gpTimer/Gpt.o
+ .text          0x00000092        0x0 ./MCAL/External_Interrupts/Ext_Interrupts.o
+ .text          0x00000092        0x0 ./MCAL/DIO/DIO.o
+ .text          0x00000092        0x0 ./ECUAL/LED/LED.o
+ .text          0x00000092        0x0 ./ECUAL/Button/Button.o
+ .text          0x00000092        0x0 ./Application/app.o
+ .text          0x00000092        0x0 ./main.o
+ .text          0x00000092        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text          0x00000092        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .text          0x00000092        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .text          0x00000092        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(abort.o)
+                0x00000092                . = ALIGN (0x2)
+ *(.text.*)
+ .text.Timer_init
+                0x00000092       0xc8 ./MCAL/gpTimer/Gpt.o
+                0x00000092                Timer_init
+ .text.Timer0_setCallBack
+                0x0000015a        0xa ./MCAL/gpTimer/Gpt.o
+                0x0000015a                Timer0_setCallBack
+ .text.Timer1_setCallBack
+                0x00000164        0xa ./MCAL/gpTimer/Gpt.o
+                0x00000164                Timer1_setCallBack
+ .text.Timer2_setCallBack
+                0x0000016e        0xa ./MCAL/gpTimer/Gpt.o
+                0x0000016e                Timer2_setCallBack
+ .text.__vector_11
+                0x00000178       0x52 ./MCAL/gpTimer/Gpt.o
+                0x00000178                __vector_11
+ .text.__vector_9
+                0x000001ca       0x52 ./MCAL/gpTimer/Gpt.o
+                0x000001ca                __vector_9
+ .text.__vector_5
+                0x0000021c       0x52 ./MCAL/gpTimer/Gpt.o
+                0x0000021c                __vector_5
+ .text.__vector_10
+                0x0000026e       0x52 ./MCAL/gpTimer/Gpt.o
+                0x0000026e                __vector_10
+ .text.__vector_7
+                0x000002c0       0x52 ./MCAL/gpTimer/Gpt.o
+                0x000002c0                __vector_7
+ .text.__vector_4
+                0x00000312       0x52 ./MCAL/gpTimer/Gpt.o
+                0x00000312                __vector_4
+ .text._SEI     0x00000364        0x4 ./MCAL/External_Interrupts/Ext_Interrupts.o
+                0x00000364                _SEI
+ .text._CLI     0x00000368        0x4 ./MCAL/External_Interrupts/Ext_Interrupts.o
+                0x00000368                _CLI
+ .text.Ext_Interrupts_Init
+                0x0000036c       0xcc ./MCAL/External_Interrupts/Ext_Interrupts.o
+                0x0000036c                Ext_Interrupts_Init
+ .text.Ext_Interrupts_deinit
+                0x00000438       0x4c ./MCAL/External_Interrupts/Ext_Interrupts.o
+                0x00000438                Ext_Interrupts_deinit
+ .text.Ext_Interrupt0_setCallBack
+                0x00000484        0xa ./MCAL/External_Interrupts/Ext_Interrupts.o
+                0x00000484                Ext_Interrupt0_setCallBack
+ .text.Ext_Interrupt1_setCallBack
+                0x0000048e        0xa ./MCAL/External_Interrupts/Ext_Interrupts.o
+                0x0000048e                Ext_Interrupt1_setCallBack
+ .text.Ext_Interrupt2_setCallBack
+                0x00000498        0xa ./MCAL/External_Interrupts/Ext_Interrupts.o
+                0x00000498                Ext_Interrupt2_setCallBack
+ .text.__vector_1
+                0x000004a2       0x52 ./MCAL/External_Interrupts/Ext_Interrupts.o
+                0x000004a2                __vector_1
+ .text.__vector_2
+                0x000004f4       0x52 ./MCAL/External_Interrupts/Ext_Interrupts.o
+                0x000004f4                __vector_2
+ .text.__vector_3
+                0x00000546       0x52 ./MCAL/External_Interrupts/Ext_Interrupts.o
+                0x00000546                __vector_3
+ .text.DIO_Init
+                0x00000598      0x1aa ./MCAL/DIO/DIO.o
+                0x00000598                DIO_Init
+ .text.Dio_ReadPin
+                0x00000742       0x6c ./MCAL/DIO/DIO.o
+                0x00000742                Dio_ReadPin
+ .text.Dio_WritePin
+                0x000007ae       0xf6 ./MCAL/DIO/DIO.o
+                0x000007ae                Dio_WritePin
+ .text.Dio_TogglePin
+                0x000008a4       0x8e ./MCAL/DIO/DIO.o
+                0x000008a4                Dio_TogglePin
+ .text.DIO_PortInit
+                0x00000932       0x3a ./MCAL/DIO/DIO.o
+                0x00000932                DIO_PortInit
+ .text.LED_refreshOutput
+                0x0000096c       0x38 ./ECUAL/LED/LED.o
+                0x0000096c                LED_refreshOutput
+ .text.LED_setOff
+                0x000009a4        0xc ./ECUAL/LED/LED.o
+                0x000009a4                LED_setOff
+ .text.LED_setOn
+                0x000009b0        0xc ./ECUAL/LED/LED.o
+                0x000009b0                LED_setOn
+ .text.LED_toggle
+                0x000009bc        0xa ./ECUAL/LED/LED.o
+                0x000009bc                LED_toggle
+ .text.LED_init
+                0x000009c6       0x88 ./ECUAL/LED/LED.o
+                0x000009c6                LED_init
+ .text.Button_Init
+                0x00000a4e       0x24 ./ECUAL/Button/Button.o
+                0x00000a4e                Button_Init
+ .text.LED_handleTimer
+                0x00000a72       0x14 ./Application/app.o
+ .text.BlinkingLED_handlerTimer2
+                0x00000a86        0x8 ./Application/app.o
+ .text.Button_handleExternalInterrupt0
+                0x00000a8e        0x8 ./Application/app.o
+ .text.APP_Test
+                0x00000a96       0x5a ./Application/app.o
+                0x00000a96                APP_Test
+ .text.RedON    0x00000af0       0x80 ./Application/app.o
+ .text.pedestrianMode
+                0x00000b70       0xba ./Application/app.o
+                0x00000b70                pedestrianMode
+ .text.YellowON
+                0x00000c2a       0x8c ./Application/app.o
+ .text.normalMode
+                0x00000cb6       0x9a ./Application/app.o
+                0x00000cb6                normalMode
+ .text.APP_start
+                0x00000d50        0xa ./Application/app.o
+                0x00000d50                APP_start
+ .text.APP_Init
+                0x00000d5a       0x5c ./Application/app.o
+                0x00000d5a                APP_Init
+ .text.main     0x00000db6        0xa ./main.o
+                0x00000db6                main
+ .text.libgcc   0x00000dc0        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x00000dc0        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc   0x00000dc0        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .text.avr-libc
+                0x00000dc0        0xa c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(abort.o)
+                0x00000dc0                abort
+                0x00000dca                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x00000dca        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x00000dca                exit
+                0x00000dca                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x00000dca        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ *(.fini0)
+                0x00000dce                _etext = .
+
+.data           0x00800060       0x44 load address 0x00000dce
+                0x00800060                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x00800060        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ .data          0x00800060        0x0 ./MCAL/gpTimer/Gpt.o
+ .data          0x00800060        0x0 ./MCAL/External_Interrupts/Ext_Interrupts.o
+ .data          0x00800060        0x0 ./MCAL/DIO/DIO.o
+ .data          0x00800060        0x0 ./ECUAL/LED/LED.o
+ .data          0x00800060        0x0 ./ECUAL/Button/Button.o
+ .data          0x00800060        0x0 ./Application/app.o
+ .data          0x00800060        0x0 ./main.o
+ .data          0x00800060        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .data          0x00800060        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .data          0x00800060        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .data          0x00800060        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(abort.o)
+ *(.data*)
+ .data.g_Timer0_Config
+                0x00800060        0x8 ./MCAL/gpTimer/Gpt.o
+                0x00800060                g_Timer0_Config
+ .data.g_Timer2_Config
+                0x00800068        0x8 ./MCAL/gpTimer/Gpt.o
+                0x00800068                g_Timer2_Config
+ .data.g_Ext_Int0_Config
+                0x00800070        0x3 ./MCAL/External_Interrupts/Ext_Interrupts.o
+                0x00800070                g_Ext_Int0_Config
+ .data.g_LED_red
+                0x00800073        0x6 ./ECUAL/LED/LED.o
+                0x00800073                g_LED_red
+ .data.g_LED_yellow
+                0x00800079        0x6 ./ECUAL/LED/LED.o
+                0x00800079                g_LED_yellow
+ .data.g_LED_green
+                0x0080007f        0x6 ./ECUAL/LED/LED.o
+                0x0080007f                g_LED_green
+ .data.g_LED_pedestrian_red
+                0x00800085        0x6 ./ECUAL/LED/LED.o
+                0x00800085                g_LED_pedestrian_red
+ .data.g_LED_pedestrian_yellow
+                0x0080008b        0x6 ./ECUAL/LED/LED.o
+                0x0080008b                g_LED_pedestrian_yellow
+ .data.g_LED_pedestrian_green
+                0x00800091        0x6 ./ECUAL/LED/LED.o
+                0x00800091                g_LED_pedestrian_green
+ .data.g_Button_PD2
+                0x00800097        0x6 ./ECUAL/LED/LED.o
+                0x00800097                g_Button_PD2
+ .data.g_PIN_TEST
+                0x0080009d        0x6 ./ECUAL/LED/LED.o
+                0x0080009d                g_PIN_TEST
+ *(.rodata)
+ *(.rodata*)
+ *(.gnu.linkonce.d*)
+                0x008000a4                . = ALIGN (0x2)
+ *fill*         0x008000a3        0x1 00
+                0x008000a4                _edata = .
+                0x008000a4                PROVIDE (__data_end, .)
+
+.bss            0x008000a4       0x13
+                0x008000a4                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x008000a4        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ .bss           0x008000a4        0x0 ./MCAL/gpTimer/Gpt.o
+ .bss           0x008000a4        0x0 ./MCAL/External_Interrupts/Ext_Interrupts.o
+ .bss           0x008000a4        0x0 ./MCAL/DIO/DIO.o
+ .bss           0x008000a4        0x0 ./ECUAL/LED/LED.o
+ .bss           0x008000a4        0x0 ./ECUAL/Button/Button.o
+ .bss           0x008000a4        0x0 ./Application/app.o
+ .bss           0x008000a4        0x0 ./main.o
+ .bss           0x008000a4        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .bss           0x008000a4        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .bss           0x008000a4        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .bss           0x008000a4        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(abort.o)
+ *(.bss*)
+ .bss.g_callBackPtr2
+                0x008000a4        0x2 ./MCAL/gpTimer/Gpt.o
+ .bss.g_callBackPtr1
+                0x008000a6        0x2 ./MCAL/gpTimer/Gpt.o
+ .bss.g_callBackPtr0
+                0x008000a8        0x2 ./MCAL/gpTimer/Gpt.o
+ .bss.g_Ext_Int_callBackPtr2
+                0x008000aa        0x2 ./MCAL/External_Interrupts/Ext_Interrupts.o
+ .bss.g_Ext_Int_callBackPtr1
+                0x008000ac        0x2 ./MCAL/External_Interrupts/Ext_Interrupts.o
+ .bss.g_Ext_Int_callBackPtr0
+                0x008000ae        0x2 ./MCAL/External_Interrupts/Ext_Interrupts.o
+ .bss.g_timer_delay
+                0x008000b0        0x2 ./Application/app.o
+                0x008000b0                g_timer_delay
+ .bss.g_Delay_LED_blinking
+                0x008000b2        0x1 ./Application/app.o
+                0x008000b2                g_Delay_LED_blinking
+ .bss.g_Button_pressed
+                0x008000b3        0x1 ./Application/app.o
+                0x008000b3                g_Button_pressed
+ .bss.g_red_flag
+                0x008000b4        0x1 ./Application/app.o
+                0x008000b4                g_red_flag
+ .bss.g_yellow_flag
+                0x008000b5        0x1 ./Application/app.o
+                0x008000b5                g_yellow_flag
+ .bss.g_green_flag
+                0x008000b6        0x1 ./Application/app.o
+                0x008000b6                g_green_flag
+ *(COMMON)
+                0x008000b7                PROVIDE (__bss_end, .)
+                0x00000dce                __data_load_start = LOADADDR (.data)
+                0x00000e12                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x008000b7        0x0
+                0x008000b7                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x008000b7                PROVIDE (__noinit_end, .)
+                0x008000b7                _end = .
+                0x008000b7                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info)
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+OUTPUT(MSH_On_demand_Traffic_light_control.elf elf32-avr)
+LOAD linker stubs
